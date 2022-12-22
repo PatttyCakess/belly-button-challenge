@@ -67,16 +67,17 @@ const url = "https://2u-data-curriculum-team.s3.amazonaws.com/dataviz-classroom/
                         tickvals: [1,2,3,4,5,6,7,8,9],
                         ticks:'outside'
                     },
+                    bar: {color: "darkblue"},
                     steps: [
-                        {range: [0,1], color:'Ivory'},
-                        {range: [1,2], color:'LightGoldenRodYellow'},
-                        {range: [2,3], color:'Beige'},
-                        {range: [3,4], color:'HoneyDew'},
-                        {range: [4,5], color:'DarkSeaGreen'},
-                        {range: [5,6], color:'CadetBlue'},
-                        {range: [6,7], color:'DarkGreen'},
-                        {range: [7,8], color:'DarkOliveGreen'},
-                        {range: [8,9], color:'DarkSlateGray'},
+                        {range: [0,1], color:'rgb(204, 102, 0)'},
+                        {range: [1,2], color:'rgb(255, 204, 0)'},
+                        {range: [2,3], color:'rgb(255, 255, 102)'},
+                        {range: [3,4], color:'rgb(204, 255, 102)'},
+                        {range: [4,5], color:'rgb(153, 255, 102)'},
+                        {range: [5,6], color:'rgb(102, 255, 102)'},
+                        {range: [6,7], color:'rgb(0, 255, 0)'},
+                        {range: [7,8], color:'rgb(0, 204, 102)'},
+                        {range: [8,9], color:'rgb(51, 153, 102)'},
                     ]
                 }
             }
