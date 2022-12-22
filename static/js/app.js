@@ -99,7 +99,8 @@ const url = "https://2u-data-curriculum-team.s3.amazonaws.com/dataviz-classroom/
         samples.then(function(d){
         let samples = d.samples;
         let metaData = d.metadata;
-
+        
+        // find new data based off selected id
         for (i = 0; i < samples.length; i++){
             if(samples[i].id == id){
                
@@ -108,6 +109,7 @@ const url = "https://2u-data-curriculum-team.s3.amazonaws.com/dataviz-classroom/
             var newBubbleValues = PullAll(samples[i])
             };
         };
+
         // update bar chart
         updateBarChart(newBarValues);
 
@@ -116,6 +118,9 @@ const url = "https://2u-data-curriculum-team.s3.amazonaws.com/dataviz-classroom/
 
         // update bubble chart
         updateBubbleChart(newBubbleValues);
+
+        //update gauge chart
+        updateGaugeChart(id, metaData);
         
         })
     }
@@ -175,6 +180,16 @@ const url = "https://2u-data-curriculum-team.s3.amazonaws.com/dataviz-classroom/
 
     }
 
+    // update gauge chart function
+    function updateGaugeChart(id, metaData){
+        for(i=0; i < metaData.length; i++){
+            if (metaData[i].id == id){
+                var bioData = metaData[i]
+            }
+        }
+
+        Plotly.restyle('gauge', 'value', bioData.wfreq)
+    }
     // sort top 10 function
     function SortNSlice(values){
     
